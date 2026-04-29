@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAMF Web Authoring Tool</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <!-- Import Map for Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="ui-panel">
+        <h1>IAMF Spatial DAW</h1>
+        <div class="controls">
+            <input type="file" id="audio-upload" accept="audio/*" multiple>
+            <button id="record-btn" style="background-color: #8b0000;">🔴 Start Recording</button>
+            <button id="export-btn">Export IAMF Config</button>
+        </div>
+        <div id="status">Status: Waiting for audio</div>
+    </div>
+    <canvas id="three-canvas"></canvas>
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
